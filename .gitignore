@@ -1,0 +1,32 @@
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Temporary and backup files
+backup/
+breadguard_web_starter/
+*.log
+.ipynb_checkpoints/
+
+# Dataset images (public sharing permissions pending)
+dataset_raw/
+dataset_split/
+
+# ZIP archives
+*.zip
+
+# Model weights (upload separately after size check)
+models/*.keras
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+README_before_github.md
+README_local_backup.txt
