@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const fileInput=$('fileInput'),dropzone=$('dropzone'),preview=$('preview'),analyzeBtn=$('analyzeBtn');
 let selectedFile=null,previewUrl=null;
-const API_BASE_URL='http://127.0.0.1:8000'; // Replace with deployed backend URL before publishing
+const API_BASE_URL='https://breadguard-ai-api.onrender.com'; // Replace with deployed backend URL before publishing
 function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove('show'),3600)}
 function chooseFile(file){if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)){toast('Please choose a JPG, PNG, or WEBP image.');return}if(file.size>10*1024*1024){toast('Image must be smaller than 10 MB.');return}selectedFile=file;if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=URL.createObjectURL(file);preview.src=previewUrl;preview.hidden=false;$('emptyState').hidden=true;analyzeBtn.disabled=false;resetResult()}
 function resetResult(){$('resultOrb').classList.remove('spoiled');$('resultSymbol').textContent='◇';$('resultTag').textContent='READY TO ANALYZE';$('resultTag').classList.remove('spoiled');$('resultTitle').innerHTML='Image ready<br>for analysis.';$('resultDescription').textContent='Press Run analysis to process your image.';$('confidenceValue').textContent='—';$('confidenceBar').style.width='0%';$('freshProb').textContent='—';$('spoiledProb').textContent='—';$('resultStatus').textContent='READY'}
