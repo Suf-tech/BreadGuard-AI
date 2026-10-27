@@ -4,3 +4,4 @@ python-multipart>=0.0.9,<1
 numpy>=1.26,<3
 Pillow>=10,<13
 tensorflow>=2.18,<2.22
+keras>=3.12,<4
