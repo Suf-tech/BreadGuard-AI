@@ -1,0 +1,47 @@
+BreadGuard AI - Dataset Information
+===================================
+
+Project: AI-Based Bread Spoilage Detection Using Deep Learning
+
+DATASET SUMMARY
+---------------
+Total unique images: 472
+Fresh images: 374
+Spoiled images: 98
+
+DATASET SPLIT
+-------------
+Training: 329 images (261 Fresh, 68 Spoiled)
+Validation: 70 images (56 Fresh, 14 Spoiled)
+Testing: 73 images (57 Fresh, 16 Spoiled)
+
+IMAGE PROCESSING
+----------------
+Input resolution: 224 x 224 pixels
+Color format: RGB
+Classes: Fresh (0), Spoiled (1)
+
+COLLECTION METHODOLOGY
+----------------------
+Images were collected from public internet image-search
+results using DuckDuckGo image search queries.
+
+Candidate images were manually reviewed and categorized.
+Exact duplicate files were removed using SHA-256 hashing.
+
+SOURCE AND LICENSING LIMITATION
+-------------------------------
+The original image URLs and individual image licenses
+were not retained during collection.
+
+The full image archive is not publicly distributed
+until redistribution permissions can be verified.
+
+REPRODUCIBILITY
+---------------
+See download_bread_images.py and split_dataset.py
+in the public GitHub repository for the data collection
+and splitting workflows.
+
+GitHub:
+https://github.com/Suf-tech/BreadGuard-AI
